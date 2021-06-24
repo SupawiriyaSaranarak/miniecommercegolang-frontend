@@ -71,7 +71,10 @@ function MyGoodsList() {
       {myGoods && (
         <div>
           <div className="table-name">สินค้าของฉัน</div>
-          <button onClick={() => history.push("/add-product")}>
+          <button
+            style={{ marginLeft: "5vw" }}
+            onClick={() => history.push("/add-product")}
+          >
             เพิ่มสินค้า
           </button>
           <div>

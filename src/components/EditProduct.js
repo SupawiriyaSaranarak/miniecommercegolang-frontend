@@ -57,18 +57,15 @@ function EditProduct() {
 
       await axios.put("api/product", formData);
       history.push("/my-goods");
-
-      
     } catch (err) {
       if (err.response) {
         console.log(err);
         console.log({ server: err.response.data.message });
-        
 
         setError({ server: err.response.data.message });
       } else {
         console.log({ front: err.message });
-       
+
         setError({ front: err.message });
       }
     }
@@ -130,14 +127,14 @@ function EditProduct() {
                 placeholder="จำนวนสินค้า"
               />
             </div>
-            {/* <div className="form-group">
+            <div className="form-group">
               <div>
                 <label htmlFor="paymentImg">รูปสินค้า:</label>&nbsp;&nbsp;
                 <input type="file" onChange={handleFileChange} />
                 <br />
                 <br />
               </div>
-            </div> */}
+            </div>
 
             {/* <div className="form-group">
               <label htmlFor="paymentMethod">Payment Method:</label>&nbsp;&nbsp;

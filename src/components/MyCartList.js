@@ -149,8 +149,14 @@ function MyCartList() {
             button={buttonDeleteCart}
           ></Table>
         </div>
-        <div>
-          <div>จำนวนเงิน: {totalPrice} บาท</div>
+        <div style={{ height: "40px" }}></div>
+        <div
+          style={{ display: "flex", flexDirection: "row", marginLeft: "70vw" }}
+        >
+          <div style={{ fontSize: "26px" }}>
+            จำนวนเงิน: <b>{totalPrice}</b> ฿
+          </div>
+          <div style={{ width: "40px" }}></div>
           <button onClick={() => handleOrder()}>จ่ายเงิน</button>
         </div>
       </div>

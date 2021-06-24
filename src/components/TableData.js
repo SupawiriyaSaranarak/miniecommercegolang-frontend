@@ -11,6 +11,7 @@ function TableData({
   showStock,
 }) {
   const [amount, setAmount] = useState(0);
+
   useEffect(() => {
     setAmount(item.Amount);
   }, []);
@@ -54,31 +55,44 @@ function TableData({
         }
         if (editAmount && header === "Amount") {
           return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                backgroundColor: "white",
-              }}
-            >
-              <button onClick={() => handleAddAmount()}>+</button>
+            <td style={{ align: "center" }}>
               <div
                 style={{
                   display: "flex",
+                  flexDirection: "row",
                   backgroundColor: "white",
-                  width: "50px",
-                  align: "center",
-                  justifyContent: "center",
-                  alignItem: "center",
+                  marginLeft: "150px",
+                  // marginRight: "200px",
                 }}
               >
-                <div>{amount}</div>
+                <button
+                  style={
+                    {
+                      // padding: "10px",
+                    }
+                  }
+                  onClick={() => handleAddAmount()}
+                >
+                  +
+                </button>
+                <div
+                  style={{
+                    display: "flex",
+                    backgroundColor: "white",
+                    width: "50px",
+                    align: "center",
+                    justifyContent: "center",
+                    alignItem: "center",
+                  }}
+                >
+                  <div>{amount}</div>
+                </div>
+                <button onClick={() => handleReduceAmount()}>-</button>
               </div>
-              <button onClick={() => handleReduceAmount()}>-</button>
-            </div>
+            </td>
           );
         }
-        if (header.includes("Img")) {
+        if (header.includes("Img") || header.includes("Image")) {
           return (
             <td>
               <img
