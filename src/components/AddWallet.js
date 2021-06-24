@@ -52,27 +52,45 @@ function AddWallet() {
 
   return (
     <div className="content-body">
-      <div style={{ height: "auto" }}></div>
+      <div style={{ height: "70px" }}></div>
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
           justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <h1>เพิ่มเงิน</h1>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <div
           style={{
-            width: "25%",
-          }}
-        ></div>
-        <div
-          style={{
-            width: "75%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
           }}
         >
+          <div
+            style={{
+              width: "40%",
+            }}
+          ></div>
+          <div
+            style={{
+              width: "75%",
+            }}
+          ></div>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="clientEmail">มูลค่า:</label>&nbsp;&nbsp;
+              <label htmlFor="clientEmail">มูลค่า:</label>&nbsp;&nbsp; <br />
               <input
                 className="form-control"
                 type="text"

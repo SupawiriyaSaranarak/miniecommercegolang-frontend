@@ -73,70 +73,84 @@ function EditProduct() {
 
   return (
     <div className="content-body">
-      <div style={{ height: "auto" }}></div>
+      <div style={{ height: "70px" }}></div>
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
           justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <h1>แก้ไขคลังสินค้า</h1>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <div
           style={{
-            width: "25%",
-          }}
-        ></div>
-        <div
-          style={{
-            width: "75%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
           }}
         >
-          <form onSubmit={handleSubmit}>
-            {/* <div className="form-group">
-              <label htmlFor="clientEmail">ชื่อสินค้า:</label>&nbsp;&nbsp;
-              <input
-                className="form-control"
-                type="text"
-                name="name"
-                placeholder="ชื่อสินค้า"
-                value={input.name}
-                onChange={handleInputChange}
-              />
-              <br />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="Price">ราคา:</label>&nbsp;&nbsp;
-              <input
-                className="form-control"
-                type="text"
-                name="price"
-                value={input.price}
-                onChange={handleInputChange}
-                placeholder="ราคา"
-              />
-            </div> */}
-            <div className="form-group">
-              <label htmlFor="paymentAmount">จำนวนสินค้า:</label>&nbsp;&nbsp;
-              <input
-                className="form-control"
-                type="text"
-                name="stock"
-                value={input.stock}
-                onChange={handleInputChange}
-                placeholder="จำนวนสินค้า"
-              />
-            </div>
-            <div className="form-group">
-              <div>
-                <label htmlFor="paymentImg">รูปสินค้า:</label>&nbsp;&nbsp;
-                <input type="file" onChange={handleFileChange} />
-                <br />
+          <div
+            style={{
+              width: "40%",
+            }}
+          ></div>
+          <div
+            style={{
+              width: "75%",
+            }}
+          >
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="clientEmail">ชื่อสินค้า:</label>&nbsp;&nbsp;
+                <div>{input.name}</div>
                 <br />
               </div>
-            </div>
 
-            {/* <div className="form-group">
+              <div className="form-group">
+                <label htmlFor="Price">ราคา:</label>&nbsp;&nbsp; <br />
+                <div>{input.price}</div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="paymentAmount">จำนวนสินค้า:</label>&nbsp;&nbsp;
+                <input
+                  className="form-control"
+                  type="text"
+                  name="stock"
+                  value={input.stock}
+                  onChange={handleInputChange}
+                  placeholder="จำนวนสินค้า"
+                />
+              </div>
+              <div className="form-group">
+                <div>
+                  <label htmlFor="paymentImg">รูปสินค้า:</label>
+                  <img
+                    style={{
+                      height: "200px",
+                      width: "200px",
+                      margin: "0 15px",
+                      objectFit: "cover",
+                      overflow: "hidden",
+                      objectPosition: "50% 50%",
+                    }}
+                    src={input.productImg}
+                  />
+                  <br />
+                </div>
+              </div>
+
+              {/* <div className="form-group">
               <label htmlFor="paymentMethod">Payment Method:</label>&nbsp;&nbsp;
               <select
                 id="paymentMethod"
@@ -158,19 +172,20 @@ function EditProduct() {
               </select>
             </div> */}
 
-            <button
-              style={{
-                backgroundColor: "rgba(174, 115, 75, 1)",
-                border: "none",
-                color: "white",
-                borderRadius: "20px",
-                height: "32px",
-                width: "90px",
-              }}
-            >
-              Submit
-            </button>
-          </form>
+              <button
+                style={{
+                  backgroundColor: "rgba(174, 115, 75, 1)",
+                  border: "none",
+                  color: "white",
+                  borderRadius: "20px",
+                  height: "32px",
+                  width: "90px",
+                }}
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <div
