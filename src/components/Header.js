@@ -79,7 +79,10 @@ function Header() {
             alignItems: "center",
           }}
         >
-          <button onClick={() => history.push("/add-wallet")}>
+          <button
+            style={{ marginRight: "20px" }}
+            onClick={() => history.push("/add-wallet")}
+          >
             {"จำนวนเงินคงเหลือ: " + balance + "฿"}
           </button>
           <a onClick={(e) => handleLogOut(e)}>Log out</a>

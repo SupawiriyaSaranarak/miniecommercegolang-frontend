@@ -8,7 +8,14 @@ function LogInPage() {
     <div>
       <Header></Header>
       <div class="dummy-head"></div>
-      <div style={{ display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <LogIn />
         <Register />
       </div>
